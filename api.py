@@ -3,14 +3,14 @@ import json
 
 from flask import Flask, jsonify, request
 
-import psycopg2
+#import psycopg2
 
 config_data = {}
 with open("config.json", "r", encoding="utf-8") as json_file:
     config_data = json.load(json_file)
 
 print(config_data)
-conn = psycopg2.connect("dbname={} user={} password={} host={}".format(config_data["db_name"], config_data["db_user"], config_data["db_password"], config_data["db_host"]))
+#conn = psycopg2.connect("dbname={} user={} password={} host={}".format(config_data["db_name"], config_data["db_user"], config_data["db_password"], config_data["db_host"]))
 
 import sys
 app = Flask(__name__)
